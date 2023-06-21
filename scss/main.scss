@@ -1,0 +1,161 @@
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap";
+@import "variables";
+@import "nevegasion";
+@import "contacto";
+@import "footer";
+@import "slider";
+// ----configuraciones generales------
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $font-family_1;
+}
+body {
+	background: #00393b;
+	min-height: 100vh;
+	overflow-x: hidden;
+	line-height: unset;
+}
+h1 {
+	font-weight: bold;
+	margin: 0;
+}
+h2 {
+	font-weight: bold;
+	margin: 0;
+	font-size: 1.5em;
+}
+
+//----paralaxx----
+.fondo {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		pointer-events: none;
+	}
+}
+//----banner´s----
+.scrol1 {
+	padding: 15%;
+	font-size: 1.5em;
+	position: relative;
+	background-image: url(../banner/banner1.png);
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	h1 {
+		text-align: center;
+		color: $color_5;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 150px;
+		background: linear-gradient(to top, #00393b,transparent);
+		z-index: 10;
+	}
+}
+//----parrafos----
+.sec {
+	position: relative;
+	background: #00393b;
+	padding: 100px;
+	h2 {
+		font-size: 3em;
+		color: $color_3;
+		margin-bottom: 10px;
+	}
+	p {
+		font-size: 1.3em;
+		color: $color_3;
+		font-weight: 300;
+	}
+}
+
+//----responsive----
+@media screen and (max-width: 920px) {
+	nav.active {
+		background: #a7ddea;
+		opacity: 100%;
+		padding: 30px 50px;
+	}
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 30px 50px;
+
+		display: flex;
+		flex-wrap: wrap;
+		z-index: 100;
+		transition: all 0.5s ease;
+		padding-left: none;
+	}
+	.navegasion {
+		a {
+			display: none;
+		}
+	}
+	.toggle {
+		display: block;
+	}
+	.dropdown {
+		display: block;
+	}
+}
+@media screen and (max-width: 800px) {
+	.fondo {
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			pointer-events: none;
+		}
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 30vh;
+	}
+	.sec {
+		position: relative;
+		background: #00393b;
+		padding: 40px;
+		h2 {
+			color: $color_3;
+			margin-bottom: 10px;
+		}
+		p {
+			color: $color_3;
+			font-weight: 300;
+		}
+	}
+	.slider {
+		flex-direction: column;
+		>* {
+			width: 100%;
+		}
+	}
+	footer {
+		.page-links {
+			a {
+				margin: auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,64 @@
+//----fooer----
+footer {
+	background-color: $background-color_4;
+	color: $color_1;
+	padding: 20px 0;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	p {
+		text-align: center;
+	}
+	.social-icons {
+		display: flex;
+		justify-content: center;
+		margin-top: 10px;
+		a {
+			color: $color_3;
+			margin: 0 10px;
+			font-size: 20px;
+			transition: all 0.3s ease;
+			&:hover {
+				transform: translateY(-3px);
+			}
+		}
+	}
+	.fab {
+		display: inline-block;
+		font-size: inherit;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		color: $color_3;
+	}
+	.fab.fa-instagram {
+		&:before {
+			content: "\f16d";
+		}
+	}
+	.fab.fa-whatsapp {
+		&:before {
+			content: "\f232";
+		}
+	}
+	.page-links {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 10px;
+		a {
+			color: $color_3;
+			margin: 0 10px;
+			font-size: 16px;
+			text-decoration: none;
+			transition: all 0.3s ease;
+			&:hover {
+				transform: translateY(-3px);
+			}
+		}
+	}
+}
